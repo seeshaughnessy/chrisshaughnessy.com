@@ -1,0 +1,39 @@
+
+
+.top-bar{
+	background-color: $white;
+	box-shadow: $box-shadow;
+	margin: 10px;
+	padding: 0;
+
+	&-left { display: none; }
+	&-right { float: left; }
+
+	ul {
+		background-color: $white;
+		margin: 0 40px;
+	}
+
+	.menu {
+		
+		li {
+
+			a {
+				color: $blue;
+			}
+
+			&:hover, 
+			&:focus {
+				background-color: $light-gray;
+			}
+
+		}
+		
+		.active>a {
+			background-color: $blue;
+			color: $white;
+			padding: 40px 15px;
+		}
+
+	}
+}

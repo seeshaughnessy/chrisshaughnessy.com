@@ -11,7 +11,7 @@ var gulp  = require('gulp'),
 // Modify these variables to match your project needs   
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = '';
+const LOCAL_URL = 'chrisshaughnessy.dev';
 
 // Select Foundation components, remove components project will not use
 const SOURCE = {

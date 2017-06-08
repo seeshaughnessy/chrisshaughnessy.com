@@ -43,6 +43,32 @@
 
 @import '../../../node_modules/foundation-sites/scss/util/util';
 
+// My colors
+$blue: #2B98F0;
+$dark-blue: #4054B2;
+$green: #2FA59A;
+$red: #EC5454;
+$yellow: #F9BF40;
+$purple: #AA4CBA;
+$light-gray: #F7F7F7;
+$medium-gray: #F0F0F0;
+$dark-gray: #E5E5E5;
+$black: #111111;
+$white: #fefefe;
+
+// My Fonts
+$roboto_light: "robotolight", Helvetica, Arial, sans-serif;
+$roboto_regular: "robotoregular", Helvetica, Arial, sans-serif;
+$roboto_italic: "robotoitalic", Helvetica, Arial, sans-serif;
+$roboto_bold: "robotobold", Helvetica, Arial, sans-serif;
+
+$raleway_bold: "ralewaybold", Arial, sans-serif;
+$raleway_extra_bold: "ralewayextrabold", Helvetica, Arial, sans-serif;
+$raleway_black: "ralewayblack", Helvetica, Arial, sans-serif;
+
+// My other variables
+$box-shadow: 0 0 40px rgba($black, .2);
+
 // 1. Global
 // ---------
 
@@ -56,14 +82,10 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: $roboto_regular;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -104,7 +126,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: $raleway_bold;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
