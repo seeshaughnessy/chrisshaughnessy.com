@@ -17,9 +17,12 @@
 	.menu {
 		
 		li {
+			background-color: $white;
+			@include animate(background-color);
 
 			a {
 				color: $blue;
+				padding: 40px 15px;
 			}
 
 			&:hover, 
@@ -32,7 +35,6 @@
 		.active>a {
 			background-color: $blue;
 			color: $white;
-			padding: 40px 15px;
 		}
 
 	}

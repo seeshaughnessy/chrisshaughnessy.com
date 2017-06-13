@@ -7,8 +7,6 @@ all of your Sass files so they can compile into one
 CSS file. 
 
 ******************************************************************/
-// Import fonts
-@import "fonts";
 
 // Import custom mixins
 @import "mixins";
@@ -63,6 +61,8 @@ CSS file.
 @include foundation-float-classes;
 
 // Import your custom styles
+@import "fonts";
+@import "fontawesome/font-awesome";
 @import "settings";
 @import "main";
 @import "nav";
