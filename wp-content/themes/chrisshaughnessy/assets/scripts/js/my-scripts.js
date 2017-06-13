@@ -18,7 +18,7 @@
 	    var $element = $(this);
 	    var $graph_title = $element.find('.graph-title');
 	    var $graph_completion = $element.find('.graph-completion');
-	    var graph_percentage = $graph_title.text();
+	    var graph_percentage = $graph_title.data('graph-value');
 	    var title_offset = parseInt(graph_percentage) - 10 + "%";
 	    var element_height = $element.outerHeight();
 	    var element_top_position = $element.offset().top + 50;
@@ -27,6 +27,8 @@
 	    //check to see if this current container is within viewport
 	    if ((element_bottom_position >= window_top_position) &&
 	        (element_top_position <= window_bottom_position)) {
+
+	    	countUp($graph_title, graph_percentage);
 
 	    	// Set title and graph percentage
 	    	$graph_title.css({ left: title_offset });
@@ -39,6 +41,18 @@
 	    	$graph_completion.css({width: 0});
 	    }
 	  });
+
+	  function countUp(element, value) {
+	  	element.prop('Counter',0).animate({
+		        Counter: value
+		    }, {
+		        duration: 3000,
+		        easing: 'swing',
+		        step: function (now) {
+		            element.text(Math.ceil(now) + '%');
+		        }
+		    });
+	  }
 	}
 	
 })(jQuery);

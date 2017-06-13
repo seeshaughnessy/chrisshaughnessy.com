@@ -31,7 +31,7 @@
 					<span class="skill-title">Photoshop</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
-					<span class="graph-title">70%</span>
+					<span data-graph-value="70%" class="graph-title" style="color: #2B98F0"></span>
 					<span class="graph-base"></span>
 					<span class="graph-completion" style=""></span>
 				</div><!-- .graph -->
@@ -42,7 +42,7 @@
 					<span class="skill-title">Illustrator</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
-					<span class="graph-title" style="color: #EC5454">50%</span>
+					<span data-graph-value="50%" class="graph-title" style="color: #EC5454"></span>
 					<span class="graph-base"></span>
 					<span class="graph-completion" style="background-color: #EC5454"></span>
 				</div><!-- .graph -->
@@ -53,7 +53,7 @@
 					<span class="skill-title">Final Cut Pro X</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
-					<span class="graph-title" style="color: #2FA59A">100%</span>
+					<span data-graph-value="99%" class="graph-title" style="color: #2FA59A"></span>
 					<span class="graph-base"></span>
 					<span class="graph-completion" style="background-color: #2FA59A"></span>
 				</div><!-- .graph -->
@@ -68,7 +68,7 @@
 					<span class="skill-title">JQuery</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
-					<span class="graph-title" style="color: #F9BF40">55%</span>
+					<span data-graph-value="55%" class="graph-title" style="color: #F9BF40"></span>
 					<span class="graph-base"></span>
 					<span class="graph-completion" style="background-color: #F9BF40"></span>
 				</div><!-- .graph -->
@@ -79,7 +79,7 @@
 					<span class="skill-title">Foundation</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
-					<span class="graph-title" style="color: #AA4CBA">80%</span>
+					<span data-graph-value="80%" class="graph-title" style="color: #AA4CBA"></span>
 					<span class="graph-base"></span>
 					<span class="graph-completion" style="background-color: #AA4CBA"></span>
 				</div><!-- .graph -->
@@ -90,7 +90,7 @@
 					<span class="skill-title">HTML/CSS</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
-					<span class="graph-title" style="color: #4054B2">90%</span>
+					<span data-graph-value="90%" class="graph-title" style="color: #4054B2"></span>
 					<span class="graph-base"></span>
 					<span class="graph-completion" style="background-color: #4054B2"></span>
 				</div><!-- .graph -->
