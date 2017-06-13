@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="about-me row">
+<section class="about-me row ">
 
 	
 	<h2 class="section-title"><i class="fa fa-user-o" aria-hidden="true"></i>About Me</h2>
@@ -13,47 +13,59 @@
 
 	<p class="section-description">Hello, I’m Chris Shaughnessy Creative Graphic Designer & User Experience Desiger based in Website, I create digital Products a more Beautiful and usable place. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
 
-	<div class="row">
+	<div class="row collapse">
 		
 		<div class="about-boxes small-12 medium-5 columns">
 			
 			<div class="row about-boxes-inner">
 				
-				<div class="small-6 columns">
-					<div class="about-box" style="border-bottom: 2px solid #2B98F0">
-						<div class="content about-box-inner">
-							<i class="fa fa-facebook" style="color: #2B98F0" aria-hidden="true"></i>
-							<span class="box-title">Facebook</span>
+				<a href="#">
+					<div class="small-6 columns">
+						<div class="about-box">
+							<div class="content about-box-inner">
+								<i class="fa fa-facebook" style="color: #2B98F0" aria-hidden="true"></i>
+								<span class="box-title">Facebook</span>
+							</div>
+							<div class="about-box-popup" style="background-color: #2B98F0"></div>
 						</div>
 					</div>
-				</div>
+				</a>
+				
+				<a href="#">
+					<div class="small-6 columns">
+						<div class="about-box">
+							<div class="content about-box-inner">
+								<i class="fa fa-instagram" style="color: #EC5454" aria-hidden="true"></i>
+								<span class="box-title">Instagram</span>
+							</div>
+							<div class="about-box-popup" style="background-color: #EC5454"></div>
+						</div>
+					</div>
+				</a>
+					
+				<a href="#">
+					<div class="small-6 columns">
+						<div class="about-box">
+							<div class="content about-box-inner">
+								<i class="fa fa-twitter" style="color: #F9BF40" aria-hidden="true"></i>
+								<span class="box-title">Twitter</span>
+							</div>
+							<div class="about-box-popup" style="background-color: #F9BF40"></div>
+						</div>
+					</div>
+				</a>	
 
-				<div class="small-6 columns">
-					<div class="about-box" style="border-bottom: 2px solid #EC5454">
-						<div class="content about-box-inner">
-							<i class="fa fa-instagram" style="color: #EC5454" aria-hidden="true"></i>
-							<span class="box-title">Instagram</span>
+				<a href="#">
+					<div class="small-6 columns">
+						<div class="about-box">
+							<div class="content about-box-inner">
+								<i class="fa fa-github-alt" style="color: #AA4CBA" aria-hidden="true"></i>
+								<span class="box-title">Github</span>
+							</div>
+							<div class="about-box-popup" style="background-color: #AA4CBA"></div>
 						</div>
 					</div>
-				</div>
-
-				<div class="small-6 columns">
-					<div class="about-box" style="border-bottom: 2px solid #F9BF40">
-						<div class="content about-box-inner">
-							<i class="fa fa-twitter" style="color: #F9BF40" aria-hidden="true"></i>
-							<span class="box-title">Twitter</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="small-6 columns">
-					<div class="about-box" style="border-bottom: 2px solid #AA4CBA">
-						<div class="content about-box-inner">
-							<i class="fa fa-github-alt" style="color: #AA4CBA" aria-hidden="true"></i>
-							<span class="box-title">Github</span>
-						</div>
-					</div>
-				</div>
+				</a>
 
 			</div><!-- .bout-boxes-inner -->
 

@@ -98,6 +98,8 @@ section {
 
 		.about-box {
 			@include aspect-ratio(1, 1);
+
+			position: relative;
 			
 			&-inner {
 				max-width: 300px;
@@ -116,15 +118,36 @@ section {
 				    bottom: 20%;
 				    left: 20%;
 				    font-weight: bold;
+				    color: $black;
+				    z-index: 4;
+				    @include animate(bottom);
 				}
+			}
+
+			&-popup {
+				display: block;
+				position: absolute;
+				bottom: 0;
+				height:2px;
+				width: 100%;
+				z-index: 3;
+				@include animate(height);
+			}
+
+			&:hover,
+			&:focus {
+				.about-box-popup { height: 3rem; }
+				.about-box-inner .box-title { bottom: .8rem; }
 			}
 		}
 	}
 
 	.personal-details {
 		border-bottom: 1px solid $medium-gray;
+		overflow-x: auto;
 
 		table {
+			width: 100%;
 			border-collapse: collapse;
 		    border-spacing: 0px;
 		    border-color: transparent;
