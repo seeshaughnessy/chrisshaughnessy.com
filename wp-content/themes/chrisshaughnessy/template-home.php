@@ -18,6 +18,10 @@ get_header(); ?>
 					<?php get_template_part( 'parts/home', 'about-me' ); ?>
 
 					<?php get_template_part( 'parts/home', 'skills' ); ?>
+
+					<?php get_template_part( 'parts/home', 'education' ); ?>
+
+					<?php get_template_part( 'parts/home', 'work-experience' ); ?>
 					
 				<?php endwhile; endif; ?>							
 

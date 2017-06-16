@@ -14,45 +14,48 @@
 	  var window_top_position = $window.scrollTop();
 	  var window_bottom_position = (window_top_position + window_height);
 
-	  $.each($animation_elements, function() {
-	    var $element = $(this);
-	    var $graph_title = $element.find('.graph-title');
-	    var $graph_completion = $element.find('.graph-completion');
-	    var graph_percentage = $graph_title.data('graph-value');
-	    var title_offset = parseInt(graph_percentage) - 10 + "%";
-	    var element_height = $element.outerHeight();
-	    var element_top_position = $element.offset().top + 50;
-	    var element_bottom_position = (element_top_position + element_height);
+		$.each($animation_elements, function() {
+		    var $element = $(this);
+		    var $graph_title = $element.find('.graph-title');
+		    var $graph_completion = $element.find('.graph-completion');
+		    var graph_percentage = $graph_title.data('graph-value');
+		    var title_offset = parseInt(graph_percentage) - 10 + "%";
+		    var element_height = $element.outerHeight();
+		    var element_top_position = $element.offset().top + 50;
+		    var element_bottom_position = (element_top_position + element_height);
 
-	    //check to see if this current container is within viewport
-	    if ((element_bottom_position >= window_top_position) &&
-	        (element_top_position <= window_bottom_position)) {
+		    //check to see if this current container is within viewport
+		    if ((element_bottom_position >= window_top_position) &&
+		        (element_top_position <= window_bottom_position)) {
 
-	    	countUp($graph_title, graph_percentage);
+		    	countUp(  );
 
-	    	// Set title and graph percentage
-	    	$graph_title.css({ left: title_offset });
-	    	$graph_completion.css({width: graph_percentage});
+		    	// Set title and graph percentage
+		    	$graph_title.css( 'left', title_offset );
+		    	$graph_completion.css( 'width', graph_percentage );
 
-	    } else {
+		    } else {
 
-	    	// Reset title and graph percentage back to 0
-	    	$graph_title.css({left: 0});
-	    	$graph_completion.css({width: 0});
-	    }
-	  });
+		    	// Reset title and graph percentage back to 0
+		    	$graph_title.css( 'left', 0 ).stop(true);
+		    	$graph_completion.css( 'width', 0 );
+		    }
 
-	  function countUp(element, value) {
-	  	element.prop('Counter',0).animate({
-		        Counter: value
-		    }, {
-		        duration: 3000,
-		        easing: 'swing',
-		        step: function (now) {
-		            element.text(Math.ceil(now) + '%');
-		        }
-		    });
-	  }
+		    function countUp(  ) {
+
+			  	$graph_title.prop( 'Counter', 0 ).animate({
+			        Counter: graph_percentage
+			    }, {
+			        duration: 3000,
+			        easing: 'swing',
+			        step: function ( now ) {
+			            $graph_title.text( Math.ceil( now ) + '%' );
+			        }
+			    });
+			}
+
+		});
+
 	}
 	
 })(jQuery);

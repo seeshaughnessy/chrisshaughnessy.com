@@ -13,7 +13,7 @@
 
 	<p class="section-description">Hello, I’m Chris Shaughnessy Creative Graphic Designer & User Experience Desiger based in Website, I create digital Products a more Beautiful and usable place. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
 
-	<div class="row collapse">
+	<div class="row">
 		
 		<div class="about-boxes small-12 medium-5 columns">
 			
@@ -116,7 +116,7 @@
 
 			</table>
 
-		</div>
+		</div><!-- .personal-details -->
 
 	</div>
 

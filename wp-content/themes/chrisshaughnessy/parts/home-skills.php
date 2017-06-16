@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="row skills-graphs">
-		<p class="skills-title">Professional Skills</p>
+		<p class="skills-title">Software</p>
 		<div class="small-12 medium-5 columns">
 			<div class="skill row">
 				<div class="small-12 medium-4 columns">
@@ -65,7 +65,7 @@
 
 			<div class="skill row">
 				<div class="small-12 medium-4 columns">
-					<span class="skill-title">JQuery</span>
+					<span class="skill-title">Motion</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
 					<span data-graph-value="55%" class="graph-title" style="color: #F9BF40"></span>
@@ -76,7 +76,7 @@
 
 			<div class="skill row">
 				<div class="small-12 medium-4 columns">
-					<span class="skill-title">Foundation</span>
+					<span class="skill-title">Storyline</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
 					<span data-graph-value="80%" class="graph-title" style="color: #AA4CBA"></span>
@@ -87,7 +87,7 @@
 
 			<div class="skill row">
 				<div class="small-12 medium-4 columns">
-					<span class="skill-title">HTML/CSS</span>
+					<span class="skill-title">Aperture</span>
 				</div>
 				<div class="graph small-12 medium-8 columns">
 					<span data-graph-value="90%" class="graph-title" style="color: #4054B2"></span>
@@ -97,6 +97,22 @@
 			</div><!-- .skill -->
 			
 		</div>
-	</div>
+	</div><!-- .skills-graphs -->
+
+<!-- 	<div class="row columns pie-charts">
+		<div class="container">
+		  <svg class="bag" height="100" width="100">
+		    <circle  cx="50" cy="50" r="40" stroke="#F8BBD0" stroke-width="7" fill="none">
+		    </circle>
+		  </svg>
+		  <svg class="over" height="100" width="100">
+		    <circle  cx="50" cy="50" r="40" stroke="#E91E63" stroke-width="7" fill="none" >
+		      <animate attributeType="CSS" attributeName="stroke-dasharray" from="1,254" to="251,52" dur="2s" repeatCount="1" />
+		    </circle>
+		  </svg>
+		</div>	
+	</div> -->
+
+
 
 </section><!-- .skills -->
