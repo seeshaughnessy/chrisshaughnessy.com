@@ -50,6 +50,12 @@
 		<div class="off-canvas-wrapper">
 							
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+
+			<div class="sidebar">
+				
+				<?php get_template_part( 'parts/home', 'sidebar' ); ?>
+
+			</div><!-- .sidebar -->
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				

@@ -28,6 +28,9 @@ require_once(get_template_directory().'/functions/page-navi.php');
 // Adds support for multiple languages
 require_once(get_template_directory().'/functions/translation/translation.php'); 
 
+// Adds my custom funcitons
+require_once(get_template_directory().'/functions/my-functions.php'); 
+
 // Adds site styles to the WordPress editor
 // require_once(get_template_directory().'/functions/editor-styles.php'); 
 

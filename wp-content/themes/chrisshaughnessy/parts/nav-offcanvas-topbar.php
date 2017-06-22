@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="top-bar" id="top-bar-menu">
+<div class="top-bar row" id="top-bar-menu">
 	<div class="top-bar-left float-left">
 		<ul class="menu">
 			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>

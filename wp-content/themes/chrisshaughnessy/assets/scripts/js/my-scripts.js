@@ -57,6 +57,38 @@
 		});
 
 	}
+
+	// Move label on contact form on :focus
+	var $contact_field = $('.gform_body li');
+	
+	// If there is an input error, keep active-input class
+	if ( $contact_field.hasClass('gfield_error') ){
+
+		$contact_field.find("label").addClass( 'active-input' );
+
+	} else {
+
+		// If in focus, add active-input, otherwise remove class
+		$('.gform_body li').focusin( function(){
+			$(this).find("label").addClass( 'active-input' );
+		});
+
+		$('.gform_body li').focusout( function(){
+			var $this = $(this);
+			if ( $this.find('input').val() == "" ) {
+				$this.find("label").removeClass( 'active-input' );
+			}
+		});
+	}
+	
+	$('#gform_submit_button_1').hover(
+		function() {
+			$(this).find('.fa').removeClass('fa-envelope-o').addClass('fa-envelope-open-o');
+		}, function(){
+			$(this).find('.fa').removeClass('fa-envelope-open-o').addClass('fa-envelope-o');
+		}
+	);
+	
 	
 })(jQuery);
 

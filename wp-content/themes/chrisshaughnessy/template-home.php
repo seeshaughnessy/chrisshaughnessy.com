@@ -22,6 +22,8 @@ get_header(); ?>
 					<?php get_template_part( 'parts/home', 'education' ); ?>
 
 					<?php get_template_part( 'parts/home', 'work-experience' ); ?>
+
+					<?php get_template_part( 'parts/home', 'contact' ); ?>
 					
 				<?php endwhile; endif; ?>							
 

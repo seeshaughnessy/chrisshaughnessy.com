@@ -15,7 +15,7 @@
 
 	<div class="row">
 		
-		<div class="small-12 medium-8 columns history">
+		<div class="small-12 medium-7 columns history">
 
 			<div class="history-scroll">
 
@@ -85,7 +85,7 @@
 
 		</div><!-- .history -->
 
-		<div class="small-12 medium-4 columns awards">
+		<div class="small-12 medium-5 columns awards">
 			
 			<div class="awards-inner">
 				

@@ -3,7 +3,6 @@
 .top-bar{
 	background-color: $white;
 	box-shadow: $box-shadow;
-	margin: 10px;
 	padding: 0;
 
 	&-left { display: none; }
@@ -35,6 +34,7 @@
 		.active>a {
 			background-color: $blue;
 			color: $white;
+			transform: scaleY(1.2);
 		}
 
 	}

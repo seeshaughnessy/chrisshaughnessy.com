@@ -1,6 +1,107 @@
 // ***************************
+// Page setup / Sidebar
+// ***************************
+
+.off-canvas-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 106rem;
+    margin: auto;
+
+    .sidebar {
+    	width: 25rem;
+    	margin: 2rem 0 0 2rem;
+    	display: none;
+    	float: left;
+    	box-shadow: $box-shadow;
+
+    	@media screen and (min-width: 106rem) {
+			display: block;
+    	}
+
+    	&-inner {
+
+    		&-heading {
+    			text-align: center;
+    			padding: 50px;
+				background-color: $white;
+				box-shadow: 0 10px 20px -5px hsla(0,0%,7%,.2);
+				position: relative;
+
+				@include breakpoint(small only) { padding: 20px; }
+				
+				h3 {
+					font-family: cursive;
+				}
+
+				.description {
+					font-size: .85rem;
+					font-style: italic;
+				}
+    		}
+
+    		.social-media, 
+    		.sidebar-inner-description { 
+    			border-bottom: 1px solid #F0F0F0;
+    		}
+
+    		.social-media {
+    			text-align: center;
+    			padding: 40px;
+
+    			.fa-stack { 
+    				color: #CCCCCC; 
+    				@include animate( color );
+
+    				&:hover,
+    				&:focus { color: $blue; }
+    			}
+    		}
+
+    		&-description {
+    			padding: 50px;
+
+    			h4 {
+    				font-size: 1rem;
+    				text-transform: uppercase;
+    			}
+    			p.content {
+    				font-size: .85rem;
+    				color: $text-gray;
+    			}
+    		}
+
+    		&-resume {
+    			padding: 50px;
+    			text-align: center;
+    		}
+    	}
+    }
+
+    .off-canvas-content {
+    	margin-top: 2rem;
+
+    	@media screen and (min-width: 106rem) {
+			max-width: 75rem;
+	    	margin: 2rem;
+	    	float: right;
+    	}
+    }
+}
+
+
+// ***************************
 // Global - Sections
 // ***************************
+
+.button { 
+	background-color: $blue;
+	padding: 1.5rem 2rem;
+
+	@include animate(all);
+	&:hover,
+	&:focus { background-color: darken($blue, 15%); }
+	}
 
 section {
 	padding: 50px;
@@ -414,7 +515,7 @@ section {
 			box-shadow: $box-shadow;
 			padding: 60px 40px;
 			margin-bottom: 20px;
-			@include breakpoint(small only) { padding: 40px 20px 40px 0; }
+			@include breakpoint(small only) { padding: 40px 20px; }
 
 			&>.row { border-bottom: 1px solid $medium-gray; }
 
@@ -457,9 +558,121 @@ section {
 			}
 		}
 	}
-
 }
 
+// ***************************
+// Contact Section
+// ***************************
+
+.contact {
+	
+	&-details {
+		overflow-x: auto;
+
+		&-phone,
+		&-email,
+		&-address { 
+			padding: 20px 20px;
+			margin: 20px;
+			@include animate(box-shadow);
+			
+			&:hover,
+			&:focus { box-shadow: $box-shadow; }
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 0px;
+				border-color: transparent;
+				border-style: hidden;
+				td { border-style: hidden; padding-top: 0; padding-bottom: 0; font-style: italic; }
+				thead tr:hover { background-color: transparent; }
+
+				thead { background: $white; }
+			}
+		}
+	}
+
+	&-form {
+		padding: 40px 30px;
+		background-color: $blue;
+		color: $white;
+		
+		h3 {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+		}
+
+		li,
+		.gfield {
+			padding: 30px 0;
+			position: relative;
+
+			label,
+			.gfield_label {
+				color: rgba(255,255,255,0.5);
+				position: absolute;
+			    top: 30px;
+			    font-size: 1.1rem;
+			    font-weight: 300;
+			    @include animate(all);
+				
+				&:hover { cursor: text; }
+			    .gfield_required { display: none; }
+			}
+
+			input,
+			textarea {
+				padding: 0;
+				background-color: $blue;
+				border: none;
+				box-shadow: none;
+				border-bottom: 2px solid rgba(255,255,255,0.5);
+				color: $white;
+				font-size: 1.1rem;
+				
+				&:hover { cursor: text; }
+				&:focus {
+					background-color: $blue;
+					border: none;
+					box-shadow: none;
+					border-bottom: 2px solid $white;
+				}
+			}
+
+			textarea { height: 200px; padding-top: 10px; }
+
+			.active-input {
+				top: 0;
+		    	font-size: .8rem;
+		    	color: $white;
+			}
+
+		}
+
+		.button {
+			background-color: $white;
+			color: #333;
+			font-size: 1.1rem;
+
+			i.fa { 
+				padding-right: 10px; 
+			}
+		}
+
+		.gform_wrapper .validation_error { display: none; }
+
+		.gform_wrapper li.gfield.gfield_error {
+			margin: 0; 
+			padding: 30px 0 !important;
+			background-color: transparent;
+			border: none;
+
+			input { border: none; border-bottom: 2px solid $white; }
+			.validation_message {  }
+		}
+	}
+}
 
 
 

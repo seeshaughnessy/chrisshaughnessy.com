@@ -10,7 +10,7 @@
 					
 				<footer class="footer" role="contentinfo">
 					
-					<div id="inner-footer" class="row">
+					<section id="inner-footer" class="row">
 						
 						<div class="small-12 medium-12 large-12 columns">
 							<nav role="navigation">
@@ -22,7 +22,7 @@
 							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 						</div>
 					
-					</div> <!-- end #inner-footer -->
+					</section> <!-- end #inner-footer -->
 				
 				</footer> <!-- end .footer -->
 			
