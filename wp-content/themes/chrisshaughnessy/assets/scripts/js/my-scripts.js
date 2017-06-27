@@ -4,7 +4,7 @@
      * Animate skills graphs onto page
      * @type {[type]}
      */
-	var $animation_elements = $('.skill');
+	var $animation_elements = $('.animate-in-view');
 	var $window = $(window);
 
 	$window.on('scroll resize', check_if_in_view);
@@ -27,6 +27,9 @@
 		    //check to see if this current container is within viewport
 		    if ((element_bottom_position >= window_top_position) &&
 		        (element_top_position <= window_bottom_position)) {
+
+		    	// Animate in donut chart when in view
+		    	updateDonutChart();
 
 		    	countUp(  );
 
@@ -57,8 +60,9 @@
 		});
 
 	}
-
+	// ***************************
 	// Move label on contact form on :focus
+	// ***************************
 	var $contact_field = $('.gform_body li');
 	
 	// If there is an input error, keep active-input class
@@ -88,7 +92,50 @@
 			$(this).find('.fa').removeClass('fa-envelope-open-o').addClass('fa-envelope-o');
 		}
 	);
+
+	// ***************************
+	// Skills donut control
+	// ***************************
 	
+	$('.skills-tag').on('click', function(){
+
+		// Show active tag
+		$('.skills-tag').removeClass('active');
+		$(this).addClass('active');
+
+		updateDonutChart();
+
+	});
+
+	function updateDonutChart(){
+
+		// Find tag skill and set to class (.)
+		var skill = $('.skills-tag.active').text();
+		skill = '.' + skill.replace(/\s+/g, '-').toLowerCase();
+
+		// Show active legend
+		$('.donut-charts-legend').removeClass('active');
+		$('.donut-charts-description').removeClass('active');
+		var $activeChart = $('.donut-charts').find(skill)
+		var countPercent = 0;
+		var count = 0;
+		
+		// Update stroke-dashoffset
+		$activeChart.addClass('active').find('li').each(function(index){
+			var dataPercent = $(this).data('percent');
+
+			$('.skills-chart').children().eq(index).addClass('drawn').css('stroke-dashoffset', countPercent);
+
+			countPercent -= dataPercent;			
+
+		});
+
+		// Remove unused colors
+		$('circle:not(.drawn)').css('stroke-dashoffset', -100);
+		$('circle').removeClass('drawn');
+
+	}
+
 	
 })(jQuery);
 

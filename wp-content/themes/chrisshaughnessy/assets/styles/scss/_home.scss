@@ -201,13 +201,14 @@ section {
 
 		.about-box {
 			@include aspect-ratio(1, 1);
-
+			overflow: hidden;
 			position: relative;
+			box-shadow: $box-shadow;
 			
 			&-inner {
 				max-width: 300px;
 				padding: 10px;
-				box-shadow: $box-shadow;
+				
 
 				i.fa {
 					font-size: 2.3rem;
@@ -237,8 +238,20 @@ section {
 				@include animate(height);
 			}
 
+			&-popup-plus {
+				display: block;
+				position: absolute;
+				top: 18%;
+				right: -3rem;
+				padding: 10px 16px;
+				z-index: 3;
+				color: $white;
+				@include animate(right);
+			}
+
 			&:hover,
 			&:focus {
+				.about-box-popup-plus { right: 0rem; }
 				.about-box-popup { height: 3rem; }
 				.about-box-inner .box-title { bottom: .8rem; color: $white; }
 			}
@@ -284,10 +297,12 @@ section {
 				font-family: $roboto_italic;
 				font-weight: bold;
 				font-size: 90%;
+				cursor: pointer;
 				@include animate(all);
 
 				&:hover,
-				&:focus {
+				&:focus,
+				&.active {
 					box-shadow: $box-shadow;
 					color: $blue;
 				}
@@ -299,6 +314,60 @@ section {
 				}
 			}
 		}
+	}
+
+	.donut-charts {
+		padding: 20px 0;
+
+		&-description,
+		&-legend,
+		.skills-chart {
+			padding-bottom: 20px;
+		}
+		
+		&-description,
+		&-legend {
+			display: none;
+			&.active { display: block }
+		}
+		&-legend {
+
+			ul {
+				li:nth-child(1){ color: $blue; }
+		    	li:nth-child(2){ color: $yellow; }
+		    	li:nth-child(3){ color: $red; }
+		    	li:nth-child(4){ color: $green; }
+		    	li:nth-child(5){ color: $purple; }
+			}
+
+			li {
+			    list-style-type: none;
+			    line-height: 2.3rem;
+
+			    .fa {
+			    	margin-left: 10px;
+			    }
+			}
+		}
+
+		svg {width: 90%; margin:0 auto; display:block;}
+
+		.skills-chart circle{
+			transition: all 1s cubic-bezier(.3,.8,.2,1);
+			stroke:currentcolor;
+			stroke-dasharray: 100, 100;
+			stroke-width:5;
+			fill:transparent;
+			transform-origin: 50% 50%;
+			transform: rotate(-90deg);
+			
+			&:nth-child(1){ color:$blue; }
+			&:nth-child(2){ color:$yellow; }
+			&:nth-child(3){ color:$red; }
+			&:nth-child(4){ color:$green; }
+			&:nth-child(5){ color:$purple; }
+		}
+
 	}
 
 	&-graphs {
@@ -354,29 +423,8 @@ section {
 		}
 		
 	}
-
-	.pie-charts {
-		svg{
-
-		}
-		.over{
-			-webkit-animation: rotator 1.5s ease-in-out infinite;
-			stroke-dasharray: 254,56;
-			position: absolute;
-		}
-		.bag{
-			position: absolute;
-		}
-		@-webkit-keyframes rotator {
-			0% { transform: rotate(0deg); }
-			100% { transform: rotate(360deg); }
-		}
-		.container{
-			position: relative;
-			height: auto;
-		}
-	}
 }
+
 
 // ***************************
 // Education Section

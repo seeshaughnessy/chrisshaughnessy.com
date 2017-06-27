@@ -15,18 +15,69 @@
 	<div class="skills-tags">
 		<i class="fa fa-tags" aria-hidden="true"></i>
 		<ul>
-			<li>Photography</li>
-			<li>Design</li>
-			<li>Development</li>
-			<li>eLearning</li>
-			<li>Video Editing</li>
+			<li class="skills-tag active">Apple</li>
+			<li class="skills-tag">Microsoft Suite</li>
+			<li class="skills-tag">Adobe</li>
 		</ul>
+	</div>
+
+	<div class="row donut-charts">
+
+		<div class="apple active donut-charts-description medium-4 columns">
+			Apple Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatem dolorum non beatae dolorem dicta perspiciatis totam, aspernatur omnis fugit quidem ullam, maxime praesentium, commodi ipsum laboriosam culpa sed fugiat.
+		</div>
+
+		<div class="microsoft-suite donut-charts-description medium-4 columns">
+			Microsoft Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatem dolorum non beatae dolorem dicta perspiciatis totam, aspernatur omnis fugit quidem ullam, maxime praesentium, commodi ipsum laboriosam culpa sed fugiat.
+		</div>
+
+		<div class="adobe donut-charts-description medium-4 columns">
+			Adobe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatem dolorum non beatae dolorem dicta perspiciatis totam, aspernatur omnis fugit quidem ullam, maxime praesentium, commodi ipsum laboriosam culpa sed fugiat.
+		</div>
+		
+		<div class="donut-charts-graph animate-in-view medium-4 columns">
+			
+			<svg viewbox="0 0 40 40" class="skills-chart">
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -0"></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100""></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
+			</svg>
+
+		</div><!-- .donut-charts-graph -->
+
+		<div class="apple active donut-charts-legend medium-4 columns">
+			<ul>
+				<li data-percent="30">iWork Suite<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="35">Final Cut Pro X<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="10">Motion<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="25">Aperture<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+			</ul>
+		</div>
+
+		<div class="microsoft-suite donut-charts-legend medium-4 columns">
+			<ul>
+				<li data-percent="40">Word<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="35">Excel<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="25">Powerpoint<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+			</ul>
+		</div>
+
+		<div class="adobe donut-charts-legend medium-4 columns">
+			<ul>
+				<li data-percent="70">Photoshop<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="25">Illustrator<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+				<li data-percent="5">After Effects<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
+			</ul>
+		</div>
+
 	</div>
 
 	<div class="row skills-graphs">
 		<p class="skills-title">Software</p>
 		<div class="small-12 medium-5 columns">
-			<div class="skill row">
+			<div class="skill animate-in-view row">
 				<div class="small-12 medium-4 columns">
 					<span class="skill-title">Photoshop</span>
 				</div>
@@ -37,7 +88,7 @@
 				</div><!-- .graph -->
 			</div><!-- .skill -->
 			
-			<div class="skill row">
+			<div class="skill animate-in-view row">
 				<div class="small-12 medium-4 columns">
 					<span class="skill-title">Illustrator</span>
 				</div>
@@ -48,7 +99,7 @@
 				</div><!-- .graph -->
 			</div><!-- .skill -->
 
-			<div class="skill row">
+			<div class="skill animate-in-view row">
 				<div class="small-12 medium-4 columns">
 					<span class="skill-title">Final Cut Pro X</span>
 				</div>
@@ -63,7 +114,7 @@
 
 		<div class="small-12 medium-5 medium-pull-1 columns">
 
-			<div class="skill row">
+			<div class="skill animate-in-view row">
 				<div class="small-12 medium-4 columns">
 					<span class="skill-title">Motion</span>
 				</div>
@@ -74,7 +125,7 @@
 				</div><!-- .graph -->
 			</div><!-- .skill -->
 
-			<div class="skill row">
+			<div class="skill animate-in-view row">
 				<div class="small-12 medium-4 columns">
 					<span class="skill-title">Storyline</span>
 				</div>
@@ -85,7 +136,7 @@
 				</div><!-- .graph -->
 			</div><!-- .skill -->
 
-			<div class="skill row">
+			<div class="skill animate-in-view row">
 				<div class="small-12 medium-4 columns">
 					<span class="skill-title">Aperture</span>
 				</div>
@@ -98,20 +149,6 @@
 			
 		</div>
 	</div><!-- .skills-graphs -->
-
-<!-- 	<div class="row columns pie-charts">
-		<div class="container">
-		  <svg class="bag" height="100" width="100">
-		    <circle  cx="50" cy="50" r="40" stroke="#F8BBD0" stroke-width="7" fill="none">
-		    </circle>
-		  </svg>
-		  <svg class="over" height="100" width="100">
-		    <circle  cx="50" cy="50" r="40" stroke="#E91E63" stroke-width="7" fill="none" >
-		      <animate attributeType="CSS" attributeName="stroke-dasharray" from="1,254" to="251,52" dur="2s" repeatCount="1" />
-		    </circle>
-		  </svg>
-		</div>	
-	</div> -->
 
 
 

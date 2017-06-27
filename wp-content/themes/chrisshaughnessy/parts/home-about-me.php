@@ -8,10 +8,10 @@
 <section class="about-me row ">
 
 	
-	<h2 class="section-title"><i class="fa fa-user-o" aria-hidden="true"></i>About Me</h2>
-	<span class="section-subtitle">About Me</span>
+	<h2 class="section-title"><i class="fa fa-user-o" aria-hidden="true"></i><?php the_field('about_me_title'); ?></h2>
+	<span class="section-subtitle"><?php the_field('about_me_title'); ?></span>
 
-	<p class="section-description">Hello, I’m Chris Shaughnessy Creative Graphic Designer & User Experience Desiger based in Website, I create digital Products a more Beautiful and usable place. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
+	<p class="section-description"><?php the_field('about_me_description'); ?></p>
 
 	<div class="row">
 		
@@ -19,53 +19,37 @@
 			
 			<div class="row about-boxes-inner">
 				
-				<a href="#">
-					<div class="small-6 columns">
-						<div class="about-box">
-							<div class="content about-box-inner">
-								<i class="fa fa-facebook" style="color: #2B98F0" aria-hidden="true"></i>
-								<span class="box-title">Facebook</span>
-							</div>
-							<div class="about-box-popup" style="background-color: #2B98F0"></div>
-						</div>
-					</div>
-				</a>
-				
-				<a href="#">
-					<div class="small-6 columns">
-						<div class="about-box">
-							<div class="content about-box-inner">
-								<i class="fa fa-instagram" style="color: #EC5454" aria-hidden="true"></i>
-								<span class="box-title">Instagram</span>
-							</div>
-							<div class="about-box-popup" style="background-color: #EC5454"></div>
-						</div>
-					</div>
-				</a>
-					
-				<a href="#">
-					<div class="small-6 columns">
-						<div class="about-box">
-							<div class="content about-box-inner">
-								<i class="fa fa-twitter" style="color: #F9BF40" aria-hidden="true"></i>
-								<span class="box-title">Twitter</span>
-							</div>
-							<div class="about-box-popup" style="background-color: #F9BF40"></div>
-						</div>
-					</div>
-				</a>	
+				<?php
 
-				<a href="#">
+				// check if the repeater field has rows of data
+				if( have_rows('social_media') ):
+
+					// loop through the rows of data
+					while ( have_rows('social_media') ) : the_row();
+
+					// vars
+					$name = get_sub_field('social_media_name');
+					$link = get_sub_field('social_media_link');
+					$icon = get_sub_field('social_media_icon');
+					$color = get_sub_field('social_media_color');
+
+				?>
+
+				<a href="<?php echo $name; ?>" alt="<?php echo $link; ?>">
 					<div class="small-6 columns">
 						<div class="about-box">
-							<div class="content about-box-inner">
-								<i class="fa fa-github-alt" style="color: #AA4CBA" aria-hidden="true"></i>
-								<span class="box-title">Github</span>
+
+							<div class="content about-box-inner">	
+								<i class="fa <?php echo $icon; ?>" style="color: <?php echo $color; ?>" aria-hidden="true"></i>
+								<span class="box-title"><?php echo $name; ?></span>
 							</div>
-							<div class="about-box-popup" style="background-color: #AA4CBA"></div>
-						</div>
-					</div>
+							<div class="about-box-popup" style="background-color: <?php echo $color; ?>"></div>
+							<div class="about-box-popup-plus" style="background-color: <?php echo $color; ?>"><i class="fa fa-plus" aria-hidden="true"></i></div>
+						</div><!-- .about-box -->
+					</div><!-- .small-6 -->
 				</a>
+
+				<?php endwhile; endif; ?>
 
 			</div><!-- .bout-boxes-inner -->
 
@@ -82,43 +66,36 @@
 				</thead>
 
 				<tbody>
+
+					<?php
+
+					// check if the repeater field has rows of data
+					if( have_rows('personal_details') ):
+
+						// loop through the rows of data
+						while ( have_rows('personal_details') ) : the_row();
+
+						// vars
+						$title = get_sub_field('detail_title');
+						$description = get_sub_field('detail_description');
+
+					?>
+
 					<tr>
-						<td>Full Name</td>
+						<td><?php echo $title; ?></td>
 						<td>:</td>
-						<td>Christopher Shaughnessy</td>
+						<td><?php echo $description; ?></td>
 					</tr>
-					<tr>
-						<td>Nick Name</td>
-						<td>:</td>
-						<td>Chris</td>
-					</tr>
-					<tr>
-						<td>Street Address</td>
-						<td>:</td>
-						<td>10400 Park Meadows Dr</td>
-					</tr>
-					<tr>
-						<td>City/State/Zip</td>
-						<td>:</td>
-						<td>Lone Tree, CO 80124</td>
-					</tr>
-					<tr>
-						<td>Phone</td>
-						<td>:</td>
-						<td>347.915.5504</td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td>:</td>
-						<td>see.shaughnessy@gmail.com</td>
-					</tr>
+
+					<?php endwhile; endif; ?>
+
 				</tbody>
 
 			</table>
 
 		</div><!-- .personal-details -->
 
-	</div>
+	</div><!-- .row -->
 
 
 </section><!-- .about-me -->
