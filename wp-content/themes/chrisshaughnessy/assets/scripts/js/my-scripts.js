@@ -97,10 +97,10 @@
 	// Skills donut control
 	// ***************************
 	
-	$('.skills-tag').on('click', function(){
+	$('.chart-nav').on('click', function(){
 
 		// Show active tag
-		$('.skills-tag').removeClass('active');
+		$('.chart-nav').removeClass('active');
 		$(this).addClass('active');
 
 		updateDonutChart();
@@ -110,7 +110,7 @@
 	function updateDonutChart(){
 
 		// Find tag skill and set to class (.)
-		var skill = $('.skills-tag.active').text();
+		var skill = $('.chart-nav.active').text();
 		skill = '.' + skill.replace(/\s+/g, '-').toLowerCase();
 
 		// Show active legend

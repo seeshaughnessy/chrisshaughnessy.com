@@ -282,94 +282,6 @@ section {
 
 .skills {
 
-	&-tags {
-
-		ul {
-			display: inline-block;
-			margin-left: 0;
-
-			a { color: $black; }
-
-			li {
-				display: inline;
-				padding: 10px;
-				list-style-type: none;
-				font-family: $roboto_italic;
-				font-weight: bold;
-				font-size: 90%;
-				cursor: pointer;
-				@include animate(all);
-
-				&:hover,
-				&:focus,
-				&.active {
-					box-shadow: $box-shadow;
-					color: $blue;
-				}
-
-				&:before {
-					content: "#";
-					display: inline-block;
-					position: relative;
-				}
-			}
-		}
-	}
-
-	.donut-charts {
-		padding: 20px 0;
-
-		&-description,
-		&-legend,
-		.skills-chart {
-			padding-bottom: 20px;
-		}
-		
-		&-description,
-		&-legend {
-			display: none;
-			&.active { display: block }
-		}
-		&-legend {
-
-			ul {
-				li:nth-child(1){ color: $blue; }
-		    	li:nth-child(2){ color: $yellow; }
-		    	li:nth-child(3){ color: $red; }
-		    	li:nth-child(4){ color: $green; }
-		    	li:nth-child(5){ color: $purple; }
-			}
-
-			li {
-			    list-style-type: none;
-			    line-height: 2.3rem;
-
-			    .fa {
-			    	margin-left: 10px;
-			    }
-			}
-		}
-
-		svg {width: 90%; margin:0 auto; display:block;}
-
-		.skills-chart circle{
-			transition: all 1s cubic-bezier(.3,.8,.2,1);
-			stroke:currentcolor;
-			stroke-dasharray: 100, 100;
-			stroke-width:5;
-			fill:transparent;
-			transform-origin: 50% 50%;
-			transform: rotate(-90deg);
-			
-			&:nth-child(1){ color:$blue; }
-			&:nth-child(2){ color:$yellow; }
-			&:nth-child(3){ color:$red; }
-			&:nth-child(4){ color:$green; }
-			&:nth-child(5){ color:$purple; }
-		}
-
-	}
-
 	&-graphs {
 		box-shadow: $box-shadow;
 		padding: 30px;
@@ -421,7 +333,80 @@ section {
 				transition: 3s;
 			}
 		}
+	}
+
+	.donut-charts {
+		padding-top: 50px;
+
+		ul { margin: 0; padding-left: 20px; }
+
+		.chart-nav {
+			list-style-type: none;
+			padding: 10px 20px;
+			margin-bottom: 10px;
+			border: 1px solid $blue;
+			color: $blue;
+			text-transform: uppercase;
+			cursor: pointer;
+			@include animate(all);
+
+			&:hover,
+			&:focus,
+			&.active {
+				border-color: $blue;
+				background-color: $blue;
+				color: $white;
+			}
+		}
+
+		&-legend,
+		.skills-chart {
+			padding-bottom: 20px;
+		}
 		
+		&-legend {
+			display: none;
+			@include animate(all);
+			&.active { display: block }
+		}
+		&-legend {
+
+			ul {
+				li:nth-child(1) .fa{ color: $blue; }
+		    	li:nth-child(2) .fa{ color: $yellow; }
+		    	li:nth-child(3) .fa{ color: $red; }
+		    	li:nth-child(4) .fa{ color: $green; }
+		    	li:nth-child(5) .fa{ color: $purple; }
+			}
+
+			li {
+			    list-style-type: none;
+			    line-height: 2.1rem;
+
+			    .fa {
+			    	margin-right: 10px;
+			    }
+			}
+		}
+
+		svg {width: 90%; margin:0 auto; display:block;}
+
+		.skills-chart circle{
+			transition: all 1s cubic-bezier(.3,.8,.2,1);
+			stroke:currentcolor;
+			stroke-dasharray: 100, 100;
+			stroke-width:5;
+			fill:transparent;
+			transform-origin: 50% 50%;
+			transform: rotate(-90deg);
+			
+			&:nth-child(1){ color:$blue; }
+			&:nth-child(2){ color:$yellow; }
+			&:nth-child(3){ color:$red; }
+			&:nth-child(4){ color:$green; }
+			&:nth-child(5){ color:$purple; }
+		}
+
 	}
 }
 

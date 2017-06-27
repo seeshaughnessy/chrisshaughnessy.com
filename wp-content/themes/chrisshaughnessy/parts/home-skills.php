@@ -12,68 +12,6 @@
 
 	<p class="section-description">Proin gravida nibh vel velit quet. Aenean sollicivin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
 
-	<div class="skills-tags">
-		<i class="fa fa-tags" aria-hidden="true"></i>
-		<ul>
-			<li class="skills-tag active">Apple</li>
-			<li class="skills-tag">Microsoft Suite</li>
-			<li class="skills-tag">Adobe</li>
-		</ul>
-	</div>
-
-	<div class="row donut-charts">
-
-		<div class="apple active donut-charts-description medium-4 columns">
-			Apple Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatem dolorum non beatae dolorem dicta perspiciatis totam, aspernatur omnis fugit quidem ullam, maxime praesentium, commodi ipsum laboriosam culpa sed fugiat.
-		</div>
-
-		<div class="microsoft-suite donut-charts-description medium-4 columns">
-			Microsoft Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatem dolorum non beatae dolorem dicta perspiciatis totam, aspernatur omnis fugit quidem ullam, maxime praesentium, commodi ipsum laboriosam culpa sed fugiat.
-		</div>
-
-		<div class="adobe donut-charts-description medium-4 columns">
-			Adobe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptatem dolorum non beatae dolorem dicta perspiciatis totam, aspernatur omnis fugit quidem ullam, maxime praesentium, commodi ipsum laboriosam culpa sed fugiat.
-		</div>
-		
-		<div class="donut-charts-graph animate-in-view medium-4 columns">
-			
-			<svg viewbox="0 0 40 40" class="skills-chart">
-				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -0"></circle> 
-				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
-				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
-				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100""></circle> 
-				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
-			</svg>
-
-		</div><!-- .donut-charts-graph -->
-
-		<div class="apple active donut-charts-legend medium-4 columns">
-			<ul>
-				<li data-percent="30">iWork Suite<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="35">Final Cut Pro X<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="10">Motion<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="25">Aperture<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-			</ul>
-		</div>
-
-		<div class="microsoft-suite donut-charts-legend medium-4 columns">
-			<ul>
-				<li data-percent="40">Word<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="35">Excel<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="25">Powerpoint<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-			</ul>
-		</div>
-
-		<div class="adobe donut-charts-legend medium-4 columns">
-			<ul>
-				<li data-percent="70">Photoshop<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="25">Illustrator<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-				<li data-percent="5">After Effects<i class="fa fa-dot-circle-o" aria-hidden="true"></i></li>
-			</ul>
-		</div>
-
-	</div>
-
 	<div class="row skills-graphs">
 		<p class="skills-title">Software</p>
 		<div class="small-12 medium-5 columns">
@@ -149,6 +87,65 @@
 			
 		</div>
 	</div><!-- .skills-graphs -->
+
+	<div class="row donut-charts">
+
+		<div class="donut-charts-content medium-8 columns">
+
+			<div class="row">
+
+				<ul class="donut-charts-nav medium-5 columns">
+					<li class="chart-nav active">Apple</li>
+					<li class="chart-nav">Microsoft Suite</li>
+					<li class="chart-nav">Adobe</li>
+				</ul>
+			
+
+				<div class="apple active donut-charts-legend medium-7 columns">
+					<p class="skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quae, blanditiis. Iure velit ad libero necessitatibus commodi dolorum consectetur. </p>
+					<ul>
+						<li data-percent="30"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>iWork Suite</li>
+						<li data-percent="35"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Final Cut Pro X</li>
+						<li data-percent="10"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Motion</li>
+						<li data-percent="25"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Aperture</li>
+					</ul>
+				</div>
+
+				<div class="microsoft-suite donut-charts-legend medium-7 columns">
+					<p class="skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quae, blanditiis. Iure velit ad libero necessitatibus commodi dolorum consectetur. </p>
+					<ul>
+						<li data-percent="40"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Word</li>
+						<li data-percent="35"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Excel</li>
+						<li data-percent="25"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Powerpoint</li>
+					</ul>
+				</div>
+
+				<div class="adobe donut-charts-legend medium-7 columns">
+					<p class="skill-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quae, blanditiis. Iure velit ad libero necessitatibus commodi dolorum consectetur. </p>
+					<ul>
+						<li data-percent="70"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Photoshop</li>
+						<li data-percent="25"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>Illustrator</li>
+						<li data-percent="5"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>After Effects</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="donut-charts-graph animate-in-view medium-4 columns">
+			
+			<svg viewbox="0 0 40 40" class="skills-chart">
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -0"></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100""></circle> 
+				<circle cx="20" cy="20" r="15.9" style="stroke-dashoffset: -100"></circle> 
+			</svg>
+
+		</div><!-- .donut-charts-graph -->
+
+	</div><!-- .donut-charts -->
 
 
 
