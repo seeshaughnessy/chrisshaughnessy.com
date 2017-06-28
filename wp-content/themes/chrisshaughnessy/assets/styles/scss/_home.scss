@@ -602,27 +602,16 @@ section {
 	&-details {
 		overflow-x: auto;
 
-		&-phone,
-		&-email,
-		&-address { 
+		&-box{ 
 			padding: 20px 20px;
 			margin: 20px;
+			line-height: 2rem;
 			@include animate(box-shadow);
+
+			h4 { font-size: 1.2rem; }
 			
 			&:hover,
 			&:focus { box-shadow: $box-shadow; }
-
-			table {
-				width: 100%;
-				border-collapse: collapse;
-				border-spacing: 0px;
-				border-color: transparent;
-				border-style: hidden;
-				td { border-style: hidden; padding-top: 0; padding-bottom: 0; font-style: italic; }
-				thead tr:hover { background-color: transparent; }
-
-				thead { background: $white; }
-			}
 		}
 	}
 
@@ -638,14 +627,14 @@ section {
 
 		li,
 		.gfield {
-			padding: 30px 0;
+			padding: 20px 0;
 			position: relative;
 
 			label,
 			.gfield_label {
 				color: rgba(255,255,255,0.5);
 				position: absolute;
-			    top: 30px;
+			    top: 20px;
 			    font-size: 1.1rem;
 			    font-weight: 300;
 			    @include animate(all);
@@ -673,7 +662,7 @@ section {
 				}
 			}
 
-			textarea { height: 200px; padding-top: 10px; }
+			textarea { height: 150px; padding-top: 10px; }
 
 			.active-input {
 				top: 0;

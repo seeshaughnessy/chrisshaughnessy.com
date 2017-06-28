@@ -1,9 +1,11 @@
 (function($) {
 
-    /**
-     * Animate skills graphs onto page
-     * @type {[type]}
-     */
+    // Remove empty P tags
+    jQuery('p:empty').remove();
+
+	// ***************************
+	// Animate elements onto page
+	// ***************************
 	var $animation_elements = $('.animate-in-view');
 	var $window = $(window);
 
@@ -35,7 +37,7 @@
 
 		    	// Set title and graph percentage
 		    	$graph_title.css( 'left', title_offset );
-		    	$graph_completion.css( 'width', graph_percentage );
+		    	$graph_completion.css( 'width', graph_percentage + '%' );
 
 		    } else {
 
