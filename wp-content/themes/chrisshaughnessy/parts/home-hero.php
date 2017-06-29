@@ -25,7 +25,7 @@
 		<div class="hero-intro">
 			<h1><?php the_field('hero_title'); ?></h1>
 			<h2><?php the_field('hero_subtitle'); ?></h2>
-			<a href="<?php the_field('hero_resume_link'); ?>" class="button"><?php the_field('hero_resume_button_text'); ?></a>
+			<a target="_blank" href="<?php the_field('hero_resume_link'); ?>" class="button"><?php the_field('hero_resume_button_text'); ?></a>
 		</div>
 	</div><!-- .hero-intro -->
 

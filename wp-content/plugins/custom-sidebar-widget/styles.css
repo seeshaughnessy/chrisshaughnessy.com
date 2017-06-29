@@ -1,0 +1,91 @@
+.sidebar {
+	width: 25rem;
+	margin: 2rem 0 0 2rem;
+	display: none;
+	float: left;
+	box-shadow: 0 0 40px rgba(0,0,0, .2);
+	overflow-y: scroll;
+}
+
+.widget {
+	padding: 50px;
+	
+}
+
+.widget:not(:last-child) {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.hello_sidebar_widget {
+	
+}
+
+.sidebar .widget-heading {
+	text-align: center;
+	padding-bottom: 50px;
+	background-color: $FFFFFF;
+	box-shadow: 0 10px 20px -5px hsla(0,0%,7%,.2);
+	position: relative;
+	margin-left: -50px;
+	margin-right: -50px;
+}
+			
+.sidebar .widget-heading h3 {
+	font-family: cursive;
+}
+
+.sidebar .widget-heading .description {
+	font-size: .85rem;
+	font-style: italic;
+}
+
+.sidebar .social-media, 
+.sidebar .widget-description { 
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.sidebar .social-media {
+	text-align: center;
+	padding: 40px;
+}
+
+.sidebar .social-media .fa-stack { 
+	color: #CCCCCC; 
+	-webkit-transition: color 0.4s cubic-bezier(.9, .1, .1, 1.5);
+   -moz-transition: color 0.4s cubic-bezier(.9, .1, .1, 1.5);
+   -o-transition: color 0.4s cubic-bezier(.9, .1, .1, 1.5);
+   transition: color 0.4s cubic-bezier(.9, .1, .1, 1.5);
+}
+.sidebar .social-media .fa-stack:hover,
+.sidebar .social-media .fa-stack:focus{
+	color: #2B98F0;
+}
+
+
+.sidebar .widget-description {
+	padding: 40px 0;
+}
+
+.sidebar .widget-description h4 {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+.sidebar .widget-description p.content {
+	font-size: .85rem;
+	color: #949494;
+}
+    	
+.sidebar .widget-resume {
+	padding-top: 50px;
+	text-align: center;
+}
+.sidebar .widget-resume .fa {
+	margin-right: 5px;
+}
+
+@media screen and (min-width: 106rem) {
+  .sidebar {
+    display: block;
+    position: fixed;
+  }
+}
