@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="work-experience row ">
+<section id="work-experience" data-magellan-target="work-experience" class="work-experience row ">
 
 	
 	<h2 class="section-title"><i class="fa fa-briefcase" aria-hidden="true"></i><?php the_field('experience_title'); ?></h2>

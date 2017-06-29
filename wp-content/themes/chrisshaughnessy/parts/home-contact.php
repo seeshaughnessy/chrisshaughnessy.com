@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="contact row ">
+<section id="contact-me" data-magellan-target="contact-me" class="contact row ">
 
 	
 	<h2 class="section-title"><i class="fa fa-address-card-o" aria-hidden="true"></i><?php the_field('contact_title'); ?></h2>

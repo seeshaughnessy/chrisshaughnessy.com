@@ -3,6 +3,23 @@
     // Remove empty P tags
     jQuery('p:empty').remove();
 
+    // Set sidebar height to viewport
+    $(window).resize(function() {
+    	$('#hello-sidebar').css('height', window.innerHeight-100+'px');
+    }).resize();
+
+    //Update active menu item on click (make home default)
+    var $menuItem = $('#top-bar-menu .menu-item a')
+    $( '#top-bar-menu .menu-item:first-child' ).addClass('active');
+    
+    $menuItem.on('click', function(){
+    	if ( ! $(this).closest('menu-item').hasClass('active') ){
+    		console.log('clicked');
+	  		$('#top-bar-menu .menu-item').removeClass('active');
+    		$(this).closest('.menu-item').addClass('active');
+    	}
+    })
+
 	// ***************************
 	// Animate elements onto page
 	// ***************************
@@ -31,7 +48,7 @@
 		        (element_top_position <= window_bottom_position)) {
 
 		    	// Animate in donut chart when in view
-		    	updateDonutChart();
+		    	if ( $element.hasClass('donut-charts-graph') ) { updateDonutChart(); }
 
 		    	countUp(  );
 

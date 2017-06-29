@@ -8,7 +8,7 @@
 
 <div class="top-bar row" id="top-bar-menu">
 	<div class="top-bar-left float-left">
-		<ul class="menu">
+		<ul class="menu" data-magellan>
 			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
 		</ul>
 	</div>
@@ -16,7 +16,7 @@
 		<?php joints_top_nav(); ?>	
 	</div>
 	<div class="top-bar-right float-right show-for-small-only">
-		<ul class="menu">
+		<ul class="menu" data-magellan>
 			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
 			<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
 		</ul>

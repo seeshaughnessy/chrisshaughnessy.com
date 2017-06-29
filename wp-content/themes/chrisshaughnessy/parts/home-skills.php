@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="skills row">
+<section id="my-skills" data-magellan-target="my-skills" class="skills row">
 
 	<h2 class="section-title"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><?php the_field('skills_title'); ?></h2>
 	<span class="section-subtitle"><?php the_field('skills_title'); ?></span>
@@ -58,19 +58,13 @@
 
 		<div class="donut-charts-content medium-8 columns">
 		
-			<?php if( have_rows('donut_charts') ): 
-				$count = 0;
-				$active = '';
-			?>
+			<?php if( have_rows('donut_charts') ): $i = 0; $j = 0; $active = ''; ?>
 
 			<div class="row">
 
 				<ul class="donut-charts-nav medium-5 columns">
 
-					<?php while ( have_rows('donut_charts') ) : the_row(); 
-						$count++;
-						$active = ( $count == 1 ) ? 'active' : '';
-					?>
+					<?php while ( have_rows('donut_charts') ) : the_row(); $i++; $active = ( $i == 1 ) ? 'active' : '';	?>
 
 					<li class="chart-nav <?php echo $active; ?>"><?php the_sub_field('chart_title'); ?></li>
 
@@ -79,13 +73,15 @@
 				</ul>
 			
 				<?php while ( have_rows('donut_charts') ) : the_row(); 
+					$j++;
+					$active = ( $j == 1 ) ? 'active' : '';
 					// Vars
 					$title = get_sub_field('chart_title');
 					$title = strtolower($title); //make lowercase for classes
 					$description = get_sub_field('chart_description');
 				?>
 
-				<div class="<?php echo $title; ?> active donut-charts-legend medium-7 columns">
+				<div class="<?php echo $title . ' ' . $active; ?> donut-charts-legend medium-7 columns">
 
 					<p class="skill-description"><?php echo $description; ?></p>
 

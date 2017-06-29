@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="education row ">
+<section id="education" data-magellan-target="education" class="education row ">
 
 	
 	<h2 class="section-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i><?php the_field('education_title'); ?></h2>

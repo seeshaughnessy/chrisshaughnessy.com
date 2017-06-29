@@ -6,6 +6,8 @@
 ?>
 
 <aside class="sidebar-inner">
+	
+	<?php get_template_part( 'hello-sidebar' ); ?>
 
 	<div class="sidebar-inner-heading">
 		

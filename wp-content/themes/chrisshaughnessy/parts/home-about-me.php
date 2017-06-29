@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="about-me row ">
+<section id="about-me" data-magellan-target="about-me" class="about-me row ">
 
 	
 	<h2 class="section-title"><i class="fa fa-user-o" aria-hidden="true"></i><?php the_field('about_me_title'); ?></h2>
@@ -35,7 +35,7 @@
 
 				?>
 
-				<a href="<?php echo $name; ?>" alt="<?php echo $link; ?>">
+				<a target="_blank" href="<?php echo $link; ?>" alt="<?php echo $name; ?>">
 					<div class="small-6 columns">
 						<div class="about-box">
 
