@@ -90,6 +90,47 @@ section {
 	&-intro,
 	&-image {
 		margin: 20px auto;
+		
+		.fa-stack {
+			font-size: 2.5rem;
+			position: absolute;
+			left: 18%;
+			top: 10%;
+			z-index: 2;
+
+			.circle { @include animate(color); }
+
+			&:hover {
+				animation: wiggle 0.2s ease;
+				-webkit-animation: wiggle 0.2s ease;
+				-moz-animation: wiggle 0.2s ease;
+				.circle { color: #D04545; }
+			}
+
+			/* safari and chrome */
+			@-webkit-keyframes wiggle {
+				0% {-webkit-transform:rotate(10deg);}
+				50% {-webkit-transform:rotate(-10deg);}
+				100% {-webkit-transform:rotate(10deg);}
+			}
+
+			/* firefox */
+			@-moz-keyframes wiggle {
+				0% {-moz-transform:rotate(10deg);}
+				50% {-moz-transform:rotate(-10deg);}
+				100% {-moz-transform:rotate(10deg);}
+			}
+
+			/* standard */
+			@keyframes wiggle {
+				0% {transform:rotate(10deg);}
+				50% {transform:rotate(-10deg);}
+				100% {transform:rotate(10deg);}
+			}
+
+		}
+		.circle { color: $red; }
+		.icon { color: $white; }
 	}
 
 	&-intro {
@@ -108,13 +149,21 @@ section {
 	}
 
 	&-image {
-		text-align: center;
-
-		img {
+		.img-wrap {
+			margin: auto;
+			display: block;
+			overflow: hidden;
 			max-width: 70%;
 			border-radius: 50%;
 			box-shadow: $box-shadow;
+			img {
+				@include animate(all);
+				&:hover { transform: scale(1.1); }
+			}
 		}
+		text-align: center;
+
+		
 	}
 	
 }

@@ -13,10 +13,10 @@ TOOLS
 
 // Animate in .2s ease-in
 @mixin animate($value) {
-   -webkit-transition: $value 0.4s cubic-bezier(.9, .1, .1, 1.5);
-   -moz-transition: $value 0.4s cubic-bezier(.9, .1, .1, 1.5);
-   -o-transition: $value 0.4s cubic-bezier(.9, .1, .1, 1.5);
-   transition: $value 0.4s cubic-bezier(.9, .1, .1, 1.5);
+   -webkit-transition: $value 0.5s ease;
+   -moz-transition: $value 0.5s ease;
+   -o-transition: $value 0.5s ease;
+   transition: $value 0.5s ease;
 }
 
 // Vertically aligns div for medium and larger

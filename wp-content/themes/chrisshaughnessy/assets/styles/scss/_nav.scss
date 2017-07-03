@@ -21,7 +21,7 @@
 
 			a {
 				color: $blue;
-				padding: 40px 15px;
+				padding: 40px 20px;
 			}
 
 			&:hover, 
@@ -34,7 +34,9 @@
 		.active>a {
 			background-color: $blue;
 			color: $white;
-			transform: scaleY(1.2);
+			transform: scale(1.2);
+			padding: 40px 15px;
+			margin: 0 10px;
 		}
 
 	}

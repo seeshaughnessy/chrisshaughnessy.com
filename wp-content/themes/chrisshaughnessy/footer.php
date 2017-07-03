@@ -19,7 +19,7 @@
 	    				</div>
 						
 						<div class="small-12 medium-12 large-12 columns">
-							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | Design by <a target="_blank" href="https://themeforest.net/item/hello-resume-cv-vcard-portfolio-material-psd-template/19652872?utm_source=sharepi">Ashkay Handge - Hello Theme</a></p>
 						</div>
 					
 					</section> <!-- end #inner-footer -->
