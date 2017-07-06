@@ -389,6 +389,32 @@ section {
 	}
 }
 
+// ***************************
+// Portfolio Section
+// ***************************
+.portfolio {
+
+	&-items {
+
+		.img-wrap {
+			overflow: hidden;
+			height: 250px;
+			width: 100%;
+
+			.img {
+				overflow: hidden;
+				height: 100%;
+				background-size: cover;
+				background-position-x: center;
+				transform: scale(1);
+				@include animate(transform);
+				
+				&:hover { transform: scale(1.2); }
+			}
+		}
+	}
+}
+
 
 // ***************************
 // Education Section

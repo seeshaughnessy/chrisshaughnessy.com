@@ -19,6 +19,8 @@ get_header(); ?>
 
 					<?php get_template_part( 'parts/home', 'skills' ); ?>
 
+					<?php get_template_part( 'parts/home', 'portfolio' ); ?>
+
 					<?php get_template_part( 'parts/home', 'education' ); ?>
 
 					<?php get_template_part( 'parts/home', 'work-experience' ); ?>
