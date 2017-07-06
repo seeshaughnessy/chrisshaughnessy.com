@@ -11,7 +11,7 @@
 	<h2 class="section-title"><i class="fa fa-paint-brush" aria-hidden="true"></i>Portfolio</h2>
 	<span class="section-subtitle">Portfolio</span>
 
-	<p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sunt placeat delectus nesciunt, porro, totam beatae, id doloribus voluptatem maiores molestiae minima pariatur mollitia quas nobis veniam ad voluptate reprehenderit.</p>
+	<p class="section-description">I've added some examples of recent work that I've done. In some cases, I've designed and developed the site. In others, I've taken a psd file and developed the website. All sites have been created using wordpress as a backend.</p>
 
 	<div class="row portfolio-items medium-collapse">
 		
