@@ -11,7 +11,20 @@ var gulp  = require('gulp'),
 // Modify these variables to match your project needs   
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'chrisshaughnessy.dev';
+const LOCAL_URL = 'http://chrisshaughnessy.dev/';
+
+const TRANSLATE = {
+	domain: 'WPGULP', // Your textdomain here
+	destFile: 'WPGULP.pot',
+	packageName:'WPGULP',
+	bugReport: 'https://AhmadAwais.com/contact/', // Where can users report bugs.
+	lastTranslator: 'Ahmad Awais <your_email@email.com>', // Last translator Email ID.
+	team: 'WPTie <your_email@email.com>', // Team's Email ID.
+	translatePath: './languages' // Where to save the translation files.
+};
+
+// Set path to Foundation files
+const FOUNDATION = 'node_modules/foundation-sites';
 
 // Select Foundation components, remove components project will not use
 const SOURCE = {
@@ -20,29 +33,29 @@ const SOURCE = {
 	    'node_modules/what-input/dist/what-input.js',
 
 		// Foundation core - needed if you want to use any of the components below
-		'node_modules/foundation-sites/js/foundation.core.js',
-		'node_modules/foundation-sites/js/foundation.util.*.js',
+		FOUNDATION + '/dist/js/plugins/foundation.core.js',
+		FOUNDATION + '/dist/js/plugins/foundation.util.*.js',
 		
 		// Pick the components you need in your project
-		'node_modules/foundation-sites/js/foundation.abide.js',
-		'node_modules/foundation-sites/js/foundation.accordion.js',
-		'node_modules/foundation-sites/js/foundation.accordionMenu.js',
-		'node_modules/foundation-sites/js/foundation.drilldown.js',
-		'node_modules/foundation-sites/js/foundation.dropdown.js',
-		'node_modules/foundation-sites/js/foundation.dropdownMenu.js',
-		'node_modules/foundation-sites/js/foundation.equalizer.js',
-		'node_modules/foundation-sites/js/foundation.interchange.js',
-		'node_modules/foundation-sites/js/foundation.magellan.js',
-		'node_modules/foundation-sites/js/foundation.offcanvas.js',
-		'node_modules/foundation-sites/js/foundation.orbit.js',
-		'node_modules/foundation-sites/js/foundation.responsiveMenu.js',
-		'node_modules/foundation-sites/js/foundation.responsiveToggle.js',
-		'node_modules/foundation-sites/js/foundation.reveal.js',
-		'node_modules/foundation-sites/js/foundation.slider.js',
-		'node_modules/foundation-sites/js/foundation.sticky.js',
-		'node_modules/foundation-sites/js/foundation.tabs.js',
-		'node_modules/foundation-sites/js/foundation.toggler.js',
-		'node_modules/foundation-sites/js/foundation.tooltip.js',
+		FOUNDATION + '/dist/js/plugins/foundation.abide.js',
+		FOUNDATION + '/dist/js/plugins/foundation.accordion.js',
+		FOUNDATION + '/dist/js/plugins/foundation.accordionMenu.js',
+		FOUNDATION + '/dist/js/plugins/foundation.drilldown.js',
+		FOUNDATION + '/dist/js/plugins/foundation.dropdown.js',
+		FOUNDATION + '/dist/js/plugins/foundation.dropdownMenu.js',
+		FOUNDATION + '/dist/js/plugins/foundation.equalizer.js',
+		FOUNDATION + '/dist/js/plugins/foundation.interchange.js',
+		FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
+		FOUNDATION + '/dist/js/plugins/foundation.offcanvas.js',
+		FOUNDATION + '/dist/js/plugins/foundation.orbit.js',
+		FOUNDATION + '/dist/js/plugins/foundation.responsiveMenu.js',
+		FOUNDATION + '/dist/js/plugins/foundation.responsiveToggle.js',
+		FOUNDATION + '/dist/js/plugins/foundation.reveal.js',
+		FOUNDATION + '/dist/js/plugins/foundation.slider.js',
+		FOUNDATION + '/dist/js/plugins/foundation.sticky.js',
+		FOUNDATION + '/dist/js/plugins/foundation.tabs.js',
+		FOUNDATION + '/dist/js/plugins/foundation.toggler.js',
+		FOUNDATION + '/dist/js/plugins/foundation.tooltip.js',
 
 		// Place custom JS here, files will be concantonated, minified if ran with --production
 		'assets/scripts/js/**/*.js',	
@@ -52,7 +65,9 @@ const SOURCE = {
 	styles: 'assets/styles/scss/**/*.scss',
 		
 	// Images placed here will be optimized
-	images: 'assets/images/**/*'
+	images: 'assets/images/**/*',
+	
+	php: '**/*.php'
 };
 
 const ASSETS = {
@@ -64,8 +79,10 @@ const ASSETS = {
 
 // GULP FUNCTIONS
 // JSHint, concat, and minify JavaScript 
-function buildScripts() {
-	const CUSTOMFILTER = filter('assets/scripts/js/**/*.js', {restore: true});
+gulp.task('scripts', function() {
+	
+	// Use a custom filter so we only lint custom JS
+	const CUSTOMFILTER = filter(ASSETS.scripts + 'js/**/*.js', {restore: true});
 	
 	return gulp.src(SOURCE.scripts)
 		.pipe(plugin.plumber(function(error) {
@@ -86,10 +103,10 @@ function buildScripts() {
 		.pipe(plugin.uglify())
 		.pipe(plugin.sourcemaps.write('.')) // Creates sourcemap for minified JS
 		.pipe(gulp.dest(ASSETS.scripts))
-} 
+});
 
 // Compile Sass, Autoprefix and minify
-function buildStyles() {
+gulp.task('styles', function() {
 	return gulp.src(SOURCE.styles)
 		.pipe(plugin.plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
@@ -104,26 +121,27 @@ function buildStyles() {
 		.pipe(plugin.cssnano())
 		.pipe(plugin.sourcemaps.write('.'))
 		.pipe(gulp.dest(ASSETS.styles))
-}
+		.pipe(browserSync.reload({
+          stream: true
+        }));
+});
 
 // Optimize images, move into assets directory
-function buildImages() {
+gulp.task('images', function() {
 	return gulp.src(SOURCE.images)
 		.pipe(plugin.newer(ASSETS.images))
 		.pipe(plugin.imagemin())
 		.pipe(gulp.dest(ASSETS.images))
-}
+});
 
-// GULP TASKS
-// See package.json for more info on running these tasks
-// Build JS files
-gulp.task('scripts', gulp.parallel(buildScripts));
-
-// Build CSS files
-gulp.task('styles', gulp.parallel(buildStyles));
-
-// Optimize images
-gulp.task('images', gulp.parallel(buildImages));
+ gulp.task( 'translate', function () {
+     return gulp.src( SOURCE.php )
+         .pipe(plugin.wpPot( {
+             domain: 'jointswp',
+             package: 'Example project'
+         } ))
+        .pipe(gulp.dest('file.pot'));
+ });
 
 // Browser-Sync watch files and inject changes
 gulp.task('browsersync', function() {
@@ -133,7 +151,7 @@ gulp.task('browsersync', function() {
     	SOURCE.styles, 
     	SOURCE.scripts,
     	SOURCE.images,
-    	'**/*.php',
+    	SOURCE.php,
     ];
 
     browserSync.init(files, {
@@ -141,7 +159,7 @@ gulp.task('browsersync', function() {
     });
     
     gulp.watch(SOURCE.styles, gulp.parallel('styles'));
-    gulp.watch(SOURCE.scripts, gulp.parallel('scripts')).on('change', browserSync.reload);
+    gulp.watch(SOURCE.scripts, gulp.series( 'scripts', browsersync.reload() );
     gulp.watch(SOURCE.images, gulp.parallel('images'));
 
 });

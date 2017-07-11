@@ -12,6 +12,7 @@
     var $menuItem = $('#top-bar-menu .menu-item a')
     $( '#top-bar-menu .menu-item:first-child' ).addClass('active');
     
+    // Update active class on nav selection
     $menuItem.on('click', function(){
     	if ( ! $(this).closest('menu-item').hasClass('active') ){
     		console.log('clicked');
