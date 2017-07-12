@@ -1,0 +1,30 @@
+.single-portfolio {
+
+	#content #inner-content {
+		box-shadow: $box-shadow;
+		margin-top: 50px;
+		padding: 50px;
+		
+		#main {
+			section {
+				box-shadow: none;
+				padding: 0;
+			}
+			article {
+				// padding: 0px 50px;
+			}
+		}
+			
+		#sidebar1 {
+			.sidebar-inner {
+				box-shadow: $box-shadow;
+				padding: 20px;
+				margin: 10px;
+
+				.widget {
+					padding: 20px 10px;
+				}
+			}
+		}
+	}
+}
