@@ -25,7 +25,7 @@ function custom_post_example() {
 			'add_new' => __('Add New', 'jointswp'), /* The add new menu item */
 			'add_new_item' => __('Add New Portfolio Item', 'jointswp'), /* Add New Display Title */
 			'edit' => __( 'Edit', 'jointswp' ), /* Edit Dialog */
-			'edit_item' => __('Edit Portfolio Items', 'jointswp'), /* Edit Display Title */
+			'edit_item' => __('Edit Portfolio Item', 'jointswp'), /* Edit Display Title */
 			'new_item' => __('New Portfolio Item', 'jointswp'), /* New Display Title */
 			'view_item' => __('View Portfolio Items', 'jointswp'), /* View Display Title */
 			'search_items' => __('Search Portfolio Items', 'jointswp'), /* Search Custom Type Title */ 

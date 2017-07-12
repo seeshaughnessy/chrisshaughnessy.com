@@ -15,8 +15,6 @@
 		<?php featured_image_with_url( 'full' ); ?>
 		<?php the_content(); ?>
 	</section> <!-- end article section -->
-
-	<?php get_template_part( 'sidebar1' ); ?>
 						
 	<footer class="article-footer">
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jointswp' ), 'after'  => '</div>' ) ); ?>

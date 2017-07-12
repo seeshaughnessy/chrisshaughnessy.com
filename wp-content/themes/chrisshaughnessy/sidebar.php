@@ -6,11 +6,15 @@
 
 <div id="sidebar1" class="sidebar small-12 medium-4 large-4 columns" role="complementary">
 
-	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+	<div class="row sidebar-inner">
 
-		<?php dynamic_sidebar( 'sidebar1' ); ?>
+		<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
-	<?php else : ?>
+			<?php dynamic_sidebar( 'sidebar1' ); ?>
+
+		<?php else : ?>
+		
+	</div><!-- .row -->
 
 	<!-- This content shows up if there are no widgets defined in the backend. -->
 						
