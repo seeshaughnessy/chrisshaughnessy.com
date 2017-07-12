@@ -31,6 +31,9 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // Adds my custom funcitons
 require_once(get_template_directory().'/functions/my-functions.php'); 
 
+// Adds portfolio post type
+require_once(get_template_directory().'/functions/portfolio-post-type.php'); 
+
 // Adds site styles to the WordPress editor
 // require_once(get_template_directory().'/functions/editor-styles.php'); 
 

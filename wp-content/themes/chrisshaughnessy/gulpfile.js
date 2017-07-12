@@ -159,7 +159,7 @@ gulp.task('browsersync', function() {
     });
     
     gulp.watch(SOURCE.styles, gulp.parallel('styles'));
-    gulp.watch(SOURCE.scripts, gulp.series( 'scripts', browsersync.reload() );
+    gulp.watch(SOURCE.scripts, gulp.parallel('scripts')).on('change', browserSync.reload);
     gulp.watch(SOURCE.images, gulp.parallel('images'));
 
 });
