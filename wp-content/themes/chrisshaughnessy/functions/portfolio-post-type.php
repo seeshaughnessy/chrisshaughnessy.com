@@ -41,8 +41,8 @@ function custom_post_example() {
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
 			'menu_icon' => 'dashicons-art', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
-			'rewrite'	=> array( 'slug' => 'portfolio_type', 'with_front' => false ), /* you can specify its url slug */
-			'has_archive' => 'portfolio_type', /* you can rename the slug here */
+			'rewrite'	=> array( 'slug' => 'portfolio', 'with_front' => false ), /* you can specify its url slug */
+			'has_archive' => 'portfolio_archive', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
@@ -51,9 +51,9 @@ function custom_post_example() {
 	); /* end of register post type */
 	
 	/* this adds your post categories to your custom post type */
-	register_taxonomy_for_object_type('category', 'portfolio_type');
+	register_taxonomy_for_object_type('category', 'portfolio');
 	/* this adds your post tags to your custom post type */
-	register_taxonomy_for_object_type('post_tag', 'portfolio_type');
+	register_taxonomy_for_object_type('post_tag', 'portfolio');
 	
 } 
 
@@ -67,7 +67,7 @@ function custom_post_example() {
 	
 	// now let's add custom categories (these act like categories)
     register_taxonomy( 'portfolio_cat', 
-    	array('portfolio_type'), /* if you change the name of register_post_type( 'portfolio_type', then you have to change this */
+    	array('portfolio'), /* if you change the name of register_post_type( 'portfolio', then you have to change this */
     	array('hierarchical' => true,     /* if this is true, it acts like categories */             
     		'labels' => array(
     			'name' => __( 'Custom Categories', 'jointswp' ), /* name of the custom taxonomy */
@@ -90,7 +90,7 @@ function custom_post_example() {
     
 	// now let's add custom tags (these act like categories)
     register_taxonomy( 'portfolio_tag', 
-    	array('portfolio_type'), /* if you change the name of register_post_type( 'portfolio_type', then you have to change this */
+    	array('portfolio'), /* if you change the name of register_post_type( 'portfolio', then you have to change this */
     	array('hierarchical' => false,    /* if this is false, it acts like tags */                
     		'labels' => array(
     			'name' => __( 'Custom Tags', 'jointswp' ), /* name of the custom taxonomy */

@@ -1,0 +1,122 @@
+// ***************************
+// Page setup / Sidebar
+// ***************************
+
+.off-canvas-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 106rem;
+    margin: auto;
+
+    .off-canvas-content {
+    	margin-top: 2rem;
+
+    	@media screen and (min-width: 106rem) {
+			max-width: 75rem;
+	    	margin: 2rem;
+	    	float: right;
+    	}
+    }
+}
+
+
+// ***************************
+// Global - Sections
+// ***************************
+
+.button { 
+	background-color: $blue;
+	padding: 1.5rem 2rem;
+
+	@include animate(all);
+	&:hover,
+	&:focus { background-color: darken($blue, 15%); }
+	}
+
+section {
+	padding: 50px;
+	background-color: $white;
+	box-shadow: $box-shadow;
+	margin-bottom: 40px;
+	position: relative;
+	@include breakpoint(small only) { padding: 20px; }
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.section-title > i {
+		color: $blue;
+		margin-right: 10px;
+	}
+	
+	h2.section-title {
+		z-index: 2;
+		position: relative;
+		margin-bottom: 40px;
+
+		@include breakpoint(small only) { margin-bottom: 20px; }
+	}
+
+	span.section-subtitle {
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		left: 50px;
+		font-size: 90px;
+		font-family: $raleway_extra_bold;
+		text-transform: uppercase;
+		color: $light-gray;
+
+		@include breakpoint(small only) {
+			font-size: 50px;
+			top: 0;
+			left: 10px;
+			white-space: nowrap;
+			overflow-x: hidden;
+		}
+	}
+
+	p.section-description {
+		color: $text-gray;
+		margin-bottom: 2rem;
+	}
+}
+
+footer {
+	margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

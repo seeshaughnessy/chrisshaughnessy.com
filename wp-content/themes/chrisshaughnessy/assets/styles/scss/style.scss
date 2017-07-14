@@ -66,5 +66,18 @@ CSS file.
 @import "settings";
 @import "main";
 @import "nav";
-@import "home";
-@import "portfolio";
+
+@import "global";
+@import "single-portfolio";
+
+// Home Page Template parts
+@import "home/hero";
+@import "home/about-me";
+@import "home/skills";
+@import "home/portfolio";
+@import "home/education";
+@import "home/work-experience";
+@import "home/contact";
+
+
+

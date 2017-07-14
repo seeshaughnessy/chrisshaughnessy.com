@@ -1,9 +1,11 @@
 <?php 
 // This file handles my portfolio functions
+
 /**
  * Add featured Image URL custom field to metabox
- * @param [type] $content [description]
- * @param [type] $post_id [description]
+ * @param [type] $content [Metabox content]
+ * @param [type] $post_id [Post ID]
+ * @return $content 
  */
 function add_featured_image_url_field ( $content, $post_id ) {
 	$field_id		= 'featured_image_url';
@@ -19,6 +21,12 @@ function add_featured_image_url_field ( $content, $post_id ) {
 }
 add_filter( "admin_post_thumbnail_html", 'add_featured_image_url_field', 10, 2 );
 
+/**
+ * Save/update featured image url field data
+ * @param  [type] $post_ID [Post ID]
+ * @param  [type] $post    [post]
+ * @param  [type] $update  [Update]
+ */
 function save_featured_image_url_field( $post_ID, $post, $update ) {
 	$field_id		= "featured_image_url";
 	$post_meta 		= isset( $_REQUEST[ $field_id ] ) ? $_REQUEST[ $field_id ] : '';

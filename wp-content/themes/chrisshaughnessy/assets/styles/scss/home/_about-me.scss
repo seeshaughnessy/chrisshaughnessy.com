@@ -1,0 +1,87 @@
+
+// ***************************
+// About Me Section
+// ***************************
+
+.about-me {
+
+	.about-boxes {
+
+		.columns { margin-bottom: 2rem; }
+
+		.about-box {
+			@include aspect-ratio(1, 1);
+			overflow: hidden;
+			position: relative;
+			box-shadow: $box-shadow;
+			
+			&-inner {
+				max-width: 300px;
+				padding: 10px;
+				
+
+				i.fa {
+					font-size: 2.3rem;
+					position: absolute;
+					top: 20%;
+					left: 20%;
+				}
+
+				.box-title {
+					position: absolute;
+					bottom: 20%;
+					left: 20%;
+					font-weight: bold;
+					color: $black;
+					z-index: 4;
+					@include animate(all);
+				}
+			}
+
+			&-popup {
+				display: block;
+				position: absolute;
+				bottom: 0;
+				height:2px;
+				width: 100%;
+				z-index: 3;
+				@include animate(height);
+			}
+
+			&-popup-plus {
+				display: block;
+				position: absolute;
+				top: 18%;
+				right: -3rem;
+				padding: 10px 16px;
+				z-index: 3;
+				color: $white;
+				@include animate(right);
+			}
+
+			&:hover,
+			&:focus {
+				.about-box-popup-plus { right: 0rem; }
+				.about-box-popup { height: 3rem; }
+				.about-box-inner .box-title { bottom: .8rem; color: $white; }
+			}
+		}
+	}
+
+	.personal-details {
+		border-bottom: 1px solid $medium-gray;
+		overflow-x: auto;
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0px;
+			border-color: transparent;
+			border-style: hidden;
+			td {border-style: hidden;}
+			thead tr:hover { background-color: transparent; }
+
+			thead { background: transparent; }
+		}
+	}
+}

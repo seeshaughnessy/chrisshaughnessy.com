@@ -1,0 +1,63 @@
+// ***************************
+// Education Section
+// ***************************
+
+.education {
+
+	.accordion {
+		box-shadow: $box-shadow;
+
+		&-item {
+
+			.accordion-title {
+				padding: 0;
+				color: $black;
+
+				i.fa { 
+					border-right: 1px solid #e6e6e6;
+					padding: 30px;
+					font-size: 2rem;
+				}
+
+				h3 { 
+					padding: 10px 40px;
+					font-size: 1.2rem; display: inline-block; 
+					font-family: $roboto_light;
+					color: $black;
+					@include breakpoint(small only) { padding-left: 10px; padding-right: 60px; }
+
+					.bold-up { font-weight: bold; text-transform: uppercase; }
+				}
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+				}
+
+				&:before {
+					content: "\f067";
+					font-size: 1.4rem;
+					font-family: fontAwesome;
+					padding: 0 20px;
+					@include animate(transform);
+					transform: rotate(-180deg);
+				}
+
+			}
+
+			.accordion-content {
+				background-color: $light-gray;
+				padding: 50px 60px;
+				color: $text-gray;
+			}
+
+			&.is-active .accordion-title:before {
+				content: "\f068";
+				@include animate(transform);
+				transform: rotate(0deg);
+			}
+		}
+
+	}
+
+}

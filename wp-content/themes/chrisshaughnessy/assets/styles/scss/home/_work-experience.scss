@@ -1,0 +1,117 @@
+// ***************************
+// Work Experience Section
+// ***************************
+
+.work-experience {
+
+	.history {
+		box-shadow: $box-shadow;
+		padding: 60px 40px;
+		margin-bottom: 20px;
+		@include breakpoint(small only) { padding: 40px 20px 40px 0; }
+
+		&-scroll {
+			padding: 0 30px;
+			height: 800px;
+			overflow-y: scroll;
+
+			&::-webkit-scrollbar {
+				width: 2px;
+				height: 100px;
+
+				&-thumb {
+					background-color: $blue;
+				}
+
+				&-track {
+					width: 2px;
+					background-color: #f0f0f0;
+				}
+			}
+		}
+
+		&-inner {
+			border-left: 2px solid $medium-gray;
+			padding: 10px 30px 0 30px;
+
+			.experience-item {
+				position: relative;
+				margin-bottom: 50px;
+
+				i.fa {
+					position: absolute;
+					left: -44px;
+					top: -3px;
+					font-size: 30px;
+					color: $blue;
+				}	
+
+				&-title,
+				&-dates,
+				&-description { margin-bottom: 1.1rem; }
+
+				&-title {
+					font-size: 1.1rem;
+					text-transform: uppercase;
+				}
+				&-dates {
+					color: $blue;
+					display: inline-block;
+				}
+				&-description {
+					color: $text-gray;
+				}
+			}
+		}
+	}
+
+	.awards {
+
+		&-inner {
+			box-shadow: $box-shadow;
+			padding: 60px 40px;
+			margin-bottom: 20px;
+			@include breakpoint(small only) { padding: 40px 20px; }
+
+			&>.row { border-bottom: 1px solid $medium-gray; }
+
+			.heading {
+				padding-bottom: 30px;
+				margin-bottom: 20px;
+
+				&-title {
+					font-size: 1.1rem;
+					text-transform: uppercase;
+
+					i.fa {
+						font-size: 3rem;
+						color: $yellow;
+						margin-right: 13px;
+					}
+				}
+			}
+
+			.award {
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+
+				&-title {
+					font-size: 1.1rem;
+					text-transform: uppercase;
+
+					&-number {
+						font-size: 50px;
+						font-family: $roboto_bold;
+						text-transform: uppercase;
+						color: $medium-gray;
+						padding-right: 10px;
+
+					}
+				}
+				&-description {
+
+				}
+			}
+		}
+	}
+}
