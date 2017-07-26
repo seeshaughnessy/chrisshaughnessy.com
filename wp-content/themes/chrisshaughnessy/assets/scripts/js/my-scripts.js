@@ -15,7 +15,6 @@
     // Update active class on nav selection
     $menuItem.on('click', function(){
     	if ( ! $(this).closest('menu-item').hasClass('active') ){
-    		console.log('clicked');
 	  		$('#top-bar-menu .menu-item').removeClass('active');
     		$(this).closest('.menu-item').addClass('active');
     	}

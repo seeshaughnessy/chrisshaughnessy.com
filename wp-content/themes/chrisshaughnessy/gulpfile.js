@@ -48,7 +48,7 @@ const SOURCE = {
 		FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
 		FOUNDATION + '/dist/js/plugins/foundation.offcanvas.js',
 		FOUNDATION + '/dist/js/plugins/foundation.orbit.js',
-		FOUNDATION + '/dist/js/plugins/foundation.responsiveMenu.js',
+		// FOUNDATION + '/dist/js/plugins/foundation.responsiveMenu.js',
 		FOUNDATION + '/dist/js/plugins/foundation.responsiveToggle.js',
 		FOUNDATION + '/dist/js/plugins/foundation.reveal.js',
 		FOUNDATION + '/dist/js/plugins/foundation.slider.js',
